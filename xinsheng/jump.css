@@ -1,0 +1,152 @@
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+body {
+  background-color:  #F5F5F5;
+}
+
+.hear{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color:  #111111;
+  z-index: 999;
+}
+.hear h2{
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  color: #ffffff;
+}
+/* 搜索框 */
+.search{
+  position: absolute;
+  display: flex;
+  border: 1px solid #8f8a8a;
+  width: 450px;
+  height: 36px;
+  top: 17px;
+  right: 600px;
+  border-radius: 8px;
+}
+.search input{
+  width: 370px;
+  border: none;
+     outline: none;
+     color: white;
+     padding-left: 11px;
+     background-color: transparent;
+}
+.search button{
+  width: 80px;
+  background-color: rgba(241, 230, 230, 0.2); 
+  color: white;
+     border: none;
+     cursor: pointer;
+     font-size: 22px;
+}
+.search button{
+  font-size: 17px;
+}
+.search:hover{
+  border: 1px solid #ffffff ; 
+}
+/* 未实现js渐变色，placeholder里的文字变化 */
+.search:hover button {
+  background: linear-gradient(to right, #00ffcc, #00cc00);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.box{
+  margin-top: 50px;
+  height: 700px;
+  background-color: #ffffff;
+  padding-top: 70px;
+}
+.box .poto{
+  float: left;
+  width: 250px;
+  height: 330px;
+  background-image: url(./photo/31.jpg);
+  margin-left: 30px;
+  border: 4px solid #F5F5F5;
+
+}
+.box h3{
+  margin-top: 9px;
+  color: blue;
+  font-weight:350;
+  text-indent: 1em;
+}
+.box h5{
+  margin-top: 12px;
+  float: left;
+  margin-left: 3px;
+  width: 150px;
+  height: 20px;
+  background-color: rgb(85, 145, 85);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 300;
+}
+.box li:first-child{
+  color: #F5F5F5;
+}
+.box li{
+  margin-top: 11px;
+  font-size: 16px;
+  font-weight: 350;
+}
+.box li span{
+  font-size: 15px;
+  font-weight:300;
+}
+.box h4{
+  margin-top: 15px;
+  float: left;
+  margin-left: 3px;
+  width: 110px;
+  height: 33px;
+  background-color: rgb(85, 145, 85);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 33px;
+  font-weight: 350;
+}
+.box h4:hover{
+  filter: brightness(0.8);
+}
+.jianjie {
+  height: 200px;
+  margin-top: 130px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.jianjie .iconfont{
+  color: green;
+  font-size: x-large;
+}
+.jianjie span{
+  color: #7a7575;
+  font-size: 22px;
+}
+.jianjie p{
+  margin-top: 15px;
+  text-indent: 1em;
+  font-weight: 330;
+}
+.foot{
+  height: 100px;
+  margin-top: 10px;
+  background-color: #444444;
+  text-align: center;
+}
+.foot h3{
+  line-height: 100px;
+  color:  #faf2f2;
+}
