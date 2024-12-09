@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>火影忍者</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./jump.css">
+  <link rel="stylesheet" href="./font_4751864_yqglx9nx4v/iconfont.css">
+  <link rel="stylesheet" href="./剧情简介/iconfont.css">
+</head>
+<body>
+  <!-- 搜索区域 -->
+  <div class="hear wrapper">
+    <h2>蓝动漫网</h2>
+    <div class="search">
+      <input type="text" id="Myinput" placeholder="火影忍者">
+      <button class="iconfont icon-sousuo"><span> 搜索</span></button>
+    </div>
+    </div>
+   
+    <div class="box wrapper">
+      <span class="poto"></span>
+      <h3>火影忍者</h3>
+      <h5>已完结 / 2022-10-23</h5>
+      <ul>
+        <li><span>jdk</span></li>
+        <li>类型：<span>喜剧动画冒险</span></li>
+        <li>导演：<span>伊达勇登村田雅彦都留稔幸</span></li>
+        <li>年份：<span>2002</span></li>
+        <li>地区：<span>日本</span></li>
+      </ul>
+      <a href="#">
+        <!-- 收藏 -->
+        <h4>立即播放</h4>
+      </a>
+      <div class="jianjie">
+        <span class="iconfont icon-duolanmingxizhang"></span>
+        <span>剧情简介</span>
+        <p>蓝动漫网为您提供伊达勇登,村田雅彦,都留稔幸,若林厚史,小坂春女,川口敬一郎执导的火影忍者高清完整版在线观看，火狼动漫网还支持手机看火影忍者，希望您能喜欢！十多年前一只拥有巨大威力的妖兽“九尾妖狐”袭击了木叶忍者村，当时的第四代火影拼尽全力，以自己的生命为代价将“九尾妖狐”封印在了刚出生的鸣人身上。木叶村终于恢复了平静，但村民们却把鸣人当成像“九尾妖狐”那样的怪物看待，所有人都疏远他。鸣人自小就孤苦无依，一晃十多年过去了，少年鸣人考入了木叶村的忍者学校，结识了好朋友佐助和小樱。佐助是宇智波家族的传人之一，当他还是小孩的时候他的哥哥——一个已经拥有高超忍术的忍者将他们家族的人都杀死了，然后投靠了一直想将木叶村毁灭的大蛇丸，佐助自小就发誓要超越哥哥，为家族报仇。鸣人他们在忍者学校得到了教官卡卡西的精心指点，在他的帮助下去迎接成长中的一次又一次挑战！</p>
+      </div>
+    </div>
+ 
+      <!-- 结束 -->
+       <div class="foot">
+        <h3>感谢支持</h3>
+       </div>
+       <script>
+        // 换字
+          const ainput =document.getElementById("Myinput")
+          const arr=["火影忍者（系列）","美少女战士","名侦探柯南（系列）","鬼灭之刃"]
+          let con= 0
+          const i = setInterval(()=>{
+            ainput.placeholder = arr[con]
+            con++
+            if(con>=arr.length){
+              con=0
+            }
+          },3000)
+      </script>
+ 
+</body>
+</html>
