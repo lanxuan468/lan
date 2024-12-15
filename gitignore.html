@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./base.css">
   <link rel="stylesheet" href="./commend.css">
   <link rel="stylesheet" href="./tubiao/iconfont.css">
+  <link rel="stylesheet" href="./photo2/font_4780028_64zbyd5t6cq/iconfont.css">
 </head>
 <!-- 最后：1，简略css。2，普通js -->
 <body>
@@ -83,11 +84,28 @@
           </div>
           </div></a>
     </div>
+    <!-- daohang -->
+    <div class="daohang">
+      <ul class="dao">
+        <a href="" >
+          <li class="on activ">轮播图 <span class="iconfont icon-xuanzeqixiayige"></span></li>
+        </a>
+        <a href="">
+          <li class="tw">重磅热播 <span class="iconfont icon-xuanzeqixiayige"></span></li>
+        </a>
+        <a href="">
+          <li class="thre">C位动漫 <span class="iconfont icon-xuanzeqixiayige"></span></li>
+        </a>
+        <a href="">
+          <li class="fro">猜你喜欢 <span class="iconfont icon-xuanzeqixiayige"></span></li>
+        </a>
+      </ul>
+    </div>
     </div>
 
     <!-- 轮播图 -->
      <a href="#"><div class="banner wrapper">
-      <img src="./photo/a.jpg" alt="Slide 1" class="carousel">
+      <img src="./photo/a.jpg" alt="Slide 1" class="carousel" >
     <img src="./photo/b.jpg" alt="Slide 2" class="carousel">
     <img src="./photo2/one.webp" alt="Slide 3" class="carousel">
       <img src="./photo/d.jpg" alt="Slide 4" class="carousel">
@@ -110,7 +128,6 @@
       <img src="./photo2/11.jpg"  >
     </div>
     <div class="i">
-
           <h3>画江湖之不良人</h3>
           <p class="d">类型：动画 动作</p>     
     </div>
@@ -212,7 +229,7 @@
       <!-- 猜你喜欢：2页  -->      
        <div class="watch wrapper">
         <h3 class="like">猜你喜欢</h3>
-       <ul>
+       <ul class="wat">
         <a href="file:///D:/git/xinsheng/jump.html" target="_blank">
           <li><img src="./photo/31.jpg" alt="">
             <h5><span class="iconfont icon-shipinzanting"></span></h5>
@@ -345,8 +362,8 @@
 
        <!-- 提示-->
         <div class="feel">
-        <img src="./photo2/1.avif" alt="">
-        <span>到底啦，往上看看吧~</span>
+        <a href=""><img src="./photo2/1.avif" alt="">
+          <span>到底啦，往上看看吧~</span></a>
         </div>
 
       <!-- 结束 -->
@@ -366,7 +383,6 @@
       win.style.position = 'relative';
     }
              })
-
 
              // 换字
     const ainput =document.getElementById("Myinput");
@@ -388,6 +404,43 @@
       Myinput.addEventListener('blur', function () {
     commendbox.style.display = 'none';
 });
+            //导航
+     const navItems = document.querySelectorAll('.daohang li');
+    // 获取各个对应的大盒子区域元素
+    const banner = document.querySelector('.banner');
+    const a = document.querySelector('.b');
+    const c = document.querySelector('.c');
+    const watch = document.querySelector('.watch');
+
+        // 存储各个大盒子区域的顶部偏移量
+  const offsets = [banner.offsetTop,a.offsetTop+550,c.offsetTop-180,watch.offsetTop-200];
+  // 处理滚动事件，判断滚动到哪个区域，激活对应的导航项
+  window.addEventListener('scroll', function () {
+      const scrollTop = document.documentElement.scrollTop;
+      for (let i = 0; i < offsets.length; i++) {
+        const isInSection = scrollTop >= offsets[i] && scrollTop < offsets[i + 1];
+        if (isInSection ||(i === offsets.length - 1 && scrollTop >= offsets[i]) ) {
+          navItems.forEach(item => item.classList.remove('activ'));//遍历删除
+          navItems[i].classList.add('activ');
+          break;
+        }
+      }
+    });
+    // 遍历增加监视器
+    navItems.forEach((item, index) => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();//阻止默认跳转
+        window.scrollTo({
+          top: offsets[index],
+          behavior: 'smooth'//平滑移动
+        });
+
+        navItems.forEach(navItem => navItem.classList.remove('activ'));
+        item.classList.add('activ');
+      });
+    }); 
+
+    
              //轮播图；
 const img = document.querySelectorAll('.carousel');
 const prevButton = document.querySelector('.prev');

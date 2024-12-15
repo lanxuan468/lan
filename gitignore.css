@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color:  #1f1e1e;
+  background-color:  #111214;
 }
 /* 头部 */
 .hear{
@@ -17,7 +17,7 @@ body {
 .hear h2{
   position: absolute;
   top: 20px;
-  left: 70px;
+  left: 50px;
   color: #ffffff;
 }
 
@@ -126,7 +126,25 @@ body {
 background-color: #555555;
 opacity: 1;
 }
-
+.daohang{
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 10%;
+  height: 400px;
+}
+.daohang li{
+  height: 100px;
+  border: 1px solid #444444;
+  text-align: center;
+  line-height: 100px;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.activ{
+  background-color: #333333;
+opacity: 0.9;
+}
 /* 轮播图 */
 .banner {
  display: block;
@@ -186,11 +204,12 @@ opacity: 1;
 .dot.active {
   background-color: rgb(158, 156, 156);
 }
+
 /* a */
 .a{
   display: flex;
   margin-top: 90px;
-  height: 780px;
+  height: 900px;
   flex-wrap: wrap;
   border-radius: 20px;
   border: 0.1px solid #444444;
@@ -204,7 +223,7 @@ opacity: 1;
   color: #ffffff;
 }
 .a .b{
-  height: 330px;
+  height: 360px;
   width: 48%;
   margin-left: 20px;
   margin-top: 10px;
@@ -348,10 +367,6 @@ color: #f7f7f7;
   border-radius: 50px;
   transition: all 0.3s ease;
 }
-.cbox a h5{
-  top: 40%;
-  left: 60%;
-}
 .watch ul li h5 span,
 .cbox a h5 span{
   line-height: 50px;
@@ -392,6 +407,15 @@ color: #f7f7f7;
   margin-left: 10px;
   font-size: small;
   color: #aea5a5;
+}
+/* 跳一下 */
+.watch li,
+.cbox a{
+  transition: transform 0.3s ease;
+}
+.watch li:hover,
+.cbox a:hover{
+  transform: translateY(-3px);
 }
 /* 页面 */
 .finlly{
