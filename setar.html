@@ -15,10 +15,14 @@
     <h2>蓝动漫网</h2>
     <div class="search">
       <input type="text" id="Myinput" placeholder="火影忍者">
-      <button class="iconfont icon-sousuo"><span> 搜索</span></button>
+      <button class="iconfont icon-sousuo"><span>搜索</span></button>
     </div>
     <div class="videoo">
-      <video src="./photo2/b11.mp4" controls></video>
+      <video src="./photo2/guanggao.mp4" class="myvideo2"></video>
+      <div class="wenzi">
+        <p>10 |<span class="dianji">点击可关闭广告</span><span class="iconfont icon-guanbi"></span></p>
+      </div>
+      <video src="./photo2/b11.mp4" class="myvideo" controls></video>
     </div>
     </div>
     <!-- 操控 -->
@@ -174,8 +178,8 @@
       }
     },3000)
     //评分
-    const ping =document.querySelector('.evaluate')
-    const pingfen =document.querySelector('.pingfen')
+    const ping =document.querySelector('.evaluate');
+    const pingfen =document.querySelector('.pingfen');
     ping.addEventListener('mouseover',function fu(){
      pingfen.style.opacity=1;
     })
@@ -183,15 +187,54 @@
       pingfen.style.opacity=0;
     })
     //隐藏
-    const all =document.querySelector('.all')
-    const cha =document.querySelector('.ying h3 span')
+    const all =document.querySelector('.all');
+    const cha =document.querySelector('.ying h3 span');
     all.addEventListener('click',function func(){
-      document.querySelector('.contral').style.display='none'
-      document.querySelector('.ying').style.display='block'
+      document.querySelector('.contral').style.display='none';
+      document.querySelector('.ying').style.display='block';
     })
     cha.addEventListener('click',function funct(){
-      document.querySelector('.contral').style.display='block'
-      document.querySelector('.ying').style.display='none'
-    })
+      document.querySelector('.contral').style.display='block';
+      document.querySelector('.ying').style.display='none';
+    });
+    //广告
+    const wenzi =document.querySelector('.wenzi');
+    window.onload = function () {
+    const video = document.querySelector('.myvideo') ;
+    const adVideo = document.querySelector('.myvideo2'); 
+    adVideo.controls = false;
+    adVideo.muted = true ;
+    video.muted = true ;
+    adVideo.addEventListener('ended', function() {
+        video.play() ;
+        adVideo.style.display='none';
+        wenzi.style.display='none';
+    }) 
+    wenzi.addEventListener('click',function(){
+  adVideo.currentTime = video.duration;
+  video.play() ;
+        adVideo.style.display='none';
+        wenzi.style.display='none';
+ });
+    adVideo.play() ;
+   
+}   
+ //倒计时
+ let c = 10;
+const countdown = function () {
+    if (c >= 0) {
+        wenzi.innerHTML = `<p>${c} |<span class="dianji">点击可关闭广告</span><span class="iconfont icon-guanbi"></span></p>`;
+        c--;
+    } 
+};
+setInterval(countdown, 1000);
+//选集
+const xuan = document.querySelectorAll('li');
+xuan.forEach(function (e) {
+    e.addEventListener('click', function () {
+      location.reload()
+    });
+});
+ 
 </script>
 </html>

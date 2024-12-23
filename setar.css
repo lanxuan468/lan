@@ -67,6 +67,31 @@ body {
   height: 100%;
   object-fit: cover;
   }
+  .myvideo2{
+    position: relative;
+  }
+  .wenzi{
+    position: absolute;
+    top: 40px;
+    right:90px;
+    padding-left: 10px;
+    background-color: #302c2c;
+    width: 200px;
+    height: 45px;
+    color: #f6d8d8;
+    font-size: 15px;
+    border-radius: 17px;
+    line-height: 45px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .dianji{
+    margin-left: 10px;
+  }
+  .wenzi .iconfont{
+    font-size: 13px;
+    margin-left: 10px;
+  }
 /* contral */
 .contral{
   width: 25%;
@@ -76,7 +101,7 @@ body {
   width: 90%;
   margin-left: 10px;
   padding-bottom: 10px;
-  background-color: #302c2c;
+  background-color: #393636;
   border-radius: 10px;
   opacity: 0.8;
   color: #cdbfbf;
@@ -89,7 +114,6 @@ body {
   border-bottom: 1px solid #797777;
   }
 .box img {
-  display: inline - block;
   width: 80px;
   height: 110px;
   margin-top: 12px;
@@ -97,7 +121,6 @@ body {
   border-radius: 5px;
   }
 .box.text {
-  flex: 1;
   color: #ffffff;
   }
  .text h3 {
@@ -153,9 +176,6 @@ body {
   width: 210px;
   height: 130px;
 }
-.evaluate:hover ~.pingfen{
- display: block;
-  }
 .contral p span{
   border-left: 0.1px solid #0b0a0a;
   margin-left: 8px;
@@ -238,7 +258,7 @@ color: #8f8d8d;
   margin-left: 10px;
 }
 .big ul li{
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: medium;
   opacity: 0.7;
 }
@@ -256,7 +276,7 @@ opacity: 1;
   width: 330px;
   height: 50px;
   margin-left: 10px;
-  margin-top: 8px;
+  margin-top: 20px;
   border-radius: 20px;
   text-align: center;
   background-color: #6d6c6c;
