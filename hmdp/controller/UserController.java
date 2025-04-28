@@ -98,5 +98,13 @@ public class UserController {
         // 返回
         return Result.ok(userDTO);
     }
+    @PostMapping("/sgin")
+    public Result sgin(){
+        return userService.sgin();
+    }
+    @GetMapping("/count")
+    public Result sginCount(){
+        return (Result) userService.sginCount();
+    }
 
 }
